@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            background-color: lightgray;
+            height:500px; /* Added background color for visibility */
+        }
+        h1 {
+            top: 0;
+            background-color: white; /* Added background color to the header */
+            padding: 10px;
+            margin: 0;
+        }
+        #fixed {
+            position: fixed;
+            top: 300px; /* Sticks to the top of the viewport */
+            left: 0; /* Sticks to the left of the viewport */
+            width: 100%; /* Full width */
+            background-color: lightyellow; /* Added background color for visibility */
+            padding: 20px;
+        }
+        #sticky{
+            position: sticky;
+            top: 0; /* Sticks to the top of the viewport */
+            background-color: lightblue; /* Added background color for visibility */
+            padding: 20px;
+        }
+        #relative {
+            position: relative;
+            background-color: lightgreen; /* Added background color for visibility */
+            padding: 20px;
+        }
+        #absolute {
+            position: absolute;
+            top: 20px; /* Positioned relative to the nearest positioned ancestor */
+            left: 140px; /* Positioned relative to the nearest positioned ancestor */
+            background-color: lightcoral; /* Added background color for visibility */
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptates obcaecati deleniti, rerum, sed inventore officiis tempore veniam similique sequi ea pariatur architecto praesentium quidem nobis? Placeat suscipit dicta, aspernatur at dignissimos odit magni quasi omnis numquam voluptates minus harum nostrum repudiandae tempora eos incidunt. Accusantium velit recusandae delectus qui. Nobis.</p>
+    <div id="sticky"><h1>Sticky</h1></div>
+    <div id="fixed"><h1>fixed</h1></div>
+    <div id="relative"><h1>relative</h1>
+    <div id="absolute">absolute</div></div>
+</body>
+</html>

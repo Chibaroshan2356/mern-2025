@@ -1,10 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Form and Table</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+
+    form input[type="text"],
+    form input[type="email"] {
+      padding: 8px;
+      width: 300px;
+      margin-bottom: 10px;
+    }
+
+    label {
+      display: inline-block;
+      width: 80px;
+    }
+
+    form input[type="submit"] {
+      padding: 8px 16px;
+      margin-top: 10px;
+    }
+
+    table {
+      margin-top: 30px;
+      border-collapse: collapse;
+      width: 50%;
+    }
+
+    th, td {
+      border: 1px solid #000;
+      padding: 8px 12px;
+      text-align: left;
+    }
+
+    th {
+      background-color: #f2f2f2;
+    }
+  </style>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Hello World</h1>
-    
+  <h1>Hello World</h1>
+
+  <form>
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" placeholder="Enter your name" required><br><br>
+
+    <label for="email">E-mail:</label>
+    <input type="email" id="email" name="email" placeholder="Enter your email" required><br><br>
+
+    <label>Gender:</label>
+    <input type="radio" name="gender" value="male"> Male
+    <input type="radio" name="gender" value="female"> Female
+    <input type="radio" name="gender" value="other"> Other<br><br>
+
+    <input type="submit" value="Submit">
+  </form>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Rosh</td>
+        <td>rosh@gmail.com</td>
+      </tr>
+      <tr>
+        <td>Chiba</td>
+        <td>chiba@gmail.com</td>
+      </tr>
+    </tbody>
+  </table>
+    <div class="header">
+            <h1>CHIBA ROSHAN A</h1>
+            <img src="profile.jpg" alt="Profile Picture">
+        </div>
+        <div class="buttons-container">
+            <a href="weblab1.html"><button>Education Qualifications</button></a>
+            <a href="weblab2.html"><button>Projects Done</button></a>
+            <a href="weblab3.html"><button>Area Of Interests</button></a>
+            <a href="weblab4.html"><button>Skill Sets</button></a>
+            <a href="weblab5.html"><button>Hobbies</button></a>
+        </div>
 </body>
 </html>
