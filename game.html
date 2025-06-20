@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Rock Paper Scissors</h1>
+    <h1>Choose your move:</h1>
+    <button onclick="getResult('rock')">Rock</button>
+    <button onclick="getResult('paper')">Paper</button>   
+    <button onclick="getResult('scissors')">Scissors</button>
+    <h1 id="result"></h1>
+    <script>
+        function getResult(userChoice) {
+            var choice = ['rock', 'paper', 'scissors'];
+            var computerChoice = choice[Math.floor(Math.random() * 3)];
+            if(userChoice === computerChoice) {
+                result = "It's a tie!😊";
+            } else if (
+                (userChoice === 'rock' && computerChoice === 'scissors') ||
+                (userChoice === 'paper' && computerChoice === 'rock') ||
+                (userChoice === 'scissors' && computerChoice === 'paper')
+            ) {
+                result = "You win!😒" + userChoice + " beats " + computerChoice;
+            } else {
+                result = "You lose!🤣" + computerChoice + " beats " + userChoice;
+            }
+            document.getElementById('result').innerText = result;
+        }
+    </script>
+</body>
+</html>
