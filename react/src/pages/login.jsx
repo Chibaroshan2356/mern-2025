@@ -1,20 +1,37 @@
-import React from 'react'
+import React , { useState} from 'react'
 
 const Login = () => {
+    const [formData , setFormData] = useState({
+        email:'',
+        password:''
+    })
+    const handleSubmit =(e) =>{
+        e.preventDefault(),
+        console.log(formData)
+        setFormData({
+            email:'',
+            password:''
+        })
+    }
+    const handleChange = (e) =>{
+        setFormData((prev) => ({...prev , [e.target.name]:e.target.value}))
+    }
+
   return (
     <div>
-      <h1>Employee Form</h1>
-      <form action="">
-        <label htmlFor="name">Name:</label>
-        <input type="text" /><br /><br />
-        <label htmlFor="dept">Department:</label>
-        <input type="text" /><br /><br />
-        <label htmlFor="email">Email ID:</label>
-        <input type="email" /><br /><br />
-        <label htmlFor="phno">PhoneNo:</label>
-        <input type="text" /><br /><br />
-        <button type="submit" onClick={()=>alert("Form Submitted Successfully")}>Submit</button>
-      </form>
+        <form action= '' onSubmit = {handleSubmit}>
+            <h1>LOGIN</h1>
+            <label>Email:</label>
+            <input type='email'
+            name = 'email'
+            value = {formData.email}
+            onChange={handleChange}/>
+
+            <label>Password: </label>
+            <input type='password' name='password'
+            value={formData.password} onChange={handleChange}/>
+            <input type='submit'/>
+        </form>
     </div>
   )
 }

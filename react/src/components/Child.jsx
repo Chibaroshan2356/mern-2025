@@ -1,14 +1,13 @@
 import React from 'react'
 
-const Child = ({name,dept,contact}) => {
+const child = ({name,ph,dept}) => {
   return (
-    <div>Child
-      <h1>Name: {name}</h1>
-      <h1>Department: {dept}</h1>
-      <h1>Contact: {contact}</h1>
-
+    <div>
+      <h1>Name:{name}</h1>
+      <h1>Phone:{ph}</h1>
+      <h1>Dept:{dept}</h1>
     </div>
   )
 }
 
-export default Child
+export default child
